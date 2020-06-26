@@ -18,8 +18,7 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-    this.squares = [1,2,3,4,5]
-    // this.squares = Array(9).fill(null);
+    this.squares = Array(9).fill(null);
     this.winner = null;
     this.xIsNext = true;
   }
@@ -28,8 +27,14 @@ export class BoardComponent implements OnInit {
     return this.xIsNext? "X" : "O"
   }
 
-  handleClick() {
-    console.log('click')
+  handleClick(i:number) {
+    if(!this.squares[i]){
+      this.squares.splice(i, 1, this.player)
+      this.xIsNext  = !this.xIsNext
+    }else{
+      alert("It has been taken!")
+    }
+
   }
 
 }
