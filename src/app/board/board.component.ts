@@ -27,4 +27,8 @@ export class BoardComponent implements OnInit {
     return this.xIsNext? "X" : "O"
   }
 
+  handleClick() {
+    console.log('click')
+  }
+
 }
