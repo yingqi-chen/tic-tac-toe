@@ -18,7 +18,8 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-    this.squares = Array(9).fill(null);
+    this.squares = [1,2,3,4,5]
+    // this.squares = Array(9).fill(null);
     this.winner = null;
     this.xIsNext = true;
   }
