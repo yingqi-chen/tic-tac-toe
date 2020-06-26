@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
+  squares: any[];
+  winner: string;
+  xIsNext: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  newGame() {
+    this.squares = Array(9).fill(null);
+    this.winner = null;
+    this.xIsNext = true;
   }
 
 }
